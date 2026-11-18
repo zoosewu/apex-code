@@ -1,0 +1,14 @@
+{
+  "latest": "v1",
+  "versions": [
+    {
+      "path": "v1",
+      "apiVersion": "1.0.0",
+      "status": "current",
+      "projects": "https://zoosewu.github.io/apex-code/api/v1/projects.json",
+      "schema": "https://zoosewu.github.io/apex-code/api/v1/schema.json",
+      "deprecatedAt": null,
+      "frozenAt": null
+    }
+  ]
+}

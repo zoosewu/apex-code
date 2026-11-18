@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>zoosewu · Projects</title>
+  <meta name="description" content="zoosewu 的專案 / Projects by zoosewu">
+  <link rel="alternate" type="application/json" href="api/v1/projects.json">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <h1>zoosewu</h1>
+    <nav>
+      <a href="https://github.com/zoosewu" rel="me">GitHub</a>
+      <a href="https://github.com/zoosewu/apex-code/blob/main/docs/API.md">API</a>
+      <button id="lang" type="button" aria-label="Language">EN</button>
+    </nav>
+  </header>
+  <main id="projects" class="grid" aria-busy="true"></main>
+  <template id="card">
+    <article class="card">
+      <a class="cover" target="_blank" rel="noopener"><img alt="" loading="lazy" decoding="async"></a>
+      <div class="body">
+        <h2><a class="name" target="_blank" rel="noopener"></a><span class="version"></span><span class="fork"></span></h2>
+        <p class="tagline"></p>
+        <p class="description"></p>
+        <ul class="chips"></ul>
+        <div class="actions"></div>
+      </div>
+    </article>
+  </template>
+</body>
+</html>

@@ -1,0 +1,316 @@
+{
+  "$schema": "https://zoosewu.github.io/apex-code/api/v1/schema.json",
+  "apiVersion": "1.0.0",
+  "updatedAt": "2026-11-19",
+  "locales": ["zh-TW", "en"],
+  "projects": [
+    {
+      "id": "zing-explore",
+      "name": "zing-explore",
+      "tagline": {
+        "zh-TW": "輕量、快速、可自訂的 Windows 11 檔案總管",
+        "en": "A lightweight, fast and customizable file manager for Windows 11"
+      },
+      "description": {
+        "zh-TW": "以 Rust、Win32 與 Direct2D 打造，執行檔約 1 MB。支援多窗格與分頁、NTFS 全磁碟即時搜尋、批次重新命名、預覽窗格與縮圖檢視，並可用 Lua 擴充。",
+        "en": "Built with Rust, Win32 and Direct2D in about 1 MB. Split panes and tabs, instant whole-disk NTFS search, batch rename, a preview pane, thumbnail views and Lua scripting."
+      },
+      "status": "active",
+      "upstream": null,
+      "platforms": ["windows"],
+      "stack": ["Rust", "Win32", "Direct2D", "Lua"],
+      "version": "v0.6.2",
+      "license": "MIT",
+      "links": {
+        "repo": "https://github.com/zoosewu/zing-explore",
+        "releases": "https://github.com/zoosewu/zing-explore/releases"
+      },
+      "install": [
+        {
+          "type": "download",
+          "url": "https://github.com/zoosewu/zing-explore/releases/latest",
+          "label": { "zh-TW": "下載 Windows 版（zip）", "en": "Download for Windows (zip)" }
+        }
+      ],
+      "screenshots": [],
+      "related": [],
+      "updatedAt": "2026-11-17"
+    },
+    {
+      "id": "zoo-type",
+      "name": "動物園輸入法 zoo-type",
+      "tagline": {
+        "zh-TW": "大千排列的繁體注音輸入法",
+        "en": "A Traditional Chinese Zhuyin input method with the standard (Dachen) layout"
+      },
+      "description": {
+        "zh-TW": "Rust 核心，支援 Windows 10 / 11 與 macOS 15 以上（初版）。中英混打、自訂縮寫、Emoji、重新選字、詞庫與學習紀錄，設定可依 App 分別調整。",
+        "en": "A Rust core for Windows 10 / 11 and macOS 15+ (early version). Mixed Chinese and English typing, custom abbreviations, emoji, reconverting committed text, user dictionaries and learning, with per-app rules."
+      },
+      "status": "active",
+      "upstream": null,
+      "platforms": ["windows", "macos"],
+      "stack": ["Rust", "TSF", "InputMethodKit"],
+      "version": "v0.1.4",
+      "license": "MIT OR Apache-2.0",
+      "links": {
+        "repo": "https://github.com/zoosewu/zoo-type",
+        "releases": "https://github.com/zoosewu/zoo-type/releases"
+      },
+      "install": [
+        {
+          "type": "download",
+          "url": "https://github.com/zoosewu/zoo-type/releases/latest",
+          "label": { "zh-TW": "下載安裝檔（Windows / macOS）", "en": "Download installer (Windows / macOS)" }
+        }
+      ],
+      "screenshots": [],
+      "related": [],
+      "updatedAt": "2026-11-18"
+    },
+    {
+      "id": "zoo-downloader",
+      "name": "Zoo Downloader",
+      "tagline": {
+        "zh-TW": "多執行緒下載管理器，搭配瀏覽器擴充與站點模組",
+        "en": "A multi-threaded download manager with a browser extension and site modules"
+      },
+      "description": {
+        "zh-TW": "分段多執行緒下載、續傳、代理伺服器池與自動切換、剪貼簿偵測、驗證碼處理。站點模組在獨立程序中執行並限制網路存取，帳密存在系統鑰匙圈。介面支援繁中、英文、日文。",
+        "en": "Segmented multi-threaded downloads with resume, a proxy pool with failover, clipboard detection and CAPTCHA handling. Site modules run in isolated processes with a network allowlist, and credentials stay in the system keychain. Available in English, Traditional Chinese and Japanese."
+      },
+      "status": "active",
+      "upstream": null,
+      "platforms": ["windows", "macos", "linux", "browser"],
+      "stack": ["Rust", "Tauri", "React", "TypeScript"],
+      "version": "v0.2.4",
+      "license": null,
+      "links": {
+        "repo": "https://github.com/zoosewu/zoo-downloader",
+        "releases": "https://github.com/zoosewu/zoo-downloader/releases"
+      },
+      "install": [
+        {
+          "type": "download",
+          "url": "https://github.com/zoosewu/zoo-downloader/releases/latest",
+          "label": { "zh-TW": "下載（Windows / macOS / Linux / 瀏覽器擴充）", "en": "Download (Windows / macOS / Linux / browser extension)" }
+        }
+      ],
+      "screenshots": [
+        {
+          "src": {
+            "zh-TW": "https://zoosewu.github.io/apex-code/screenshots/zoo-downloader/01-list.zh-TW.png",
+            "en": "https://zoosewu.github.io/apex-code/screenshots/zoo-downloader/01-list.en.png"
+          },
+          "caption": { "zh-TW": "下載清單", "en": "Download list" },
+          "width": 1280,
+          "height": 800
+        },
+        {
+          "src": {
+            "zh-TW": "https://zoosewu.github.io/apex-code/screenshots/zoo-downloader/02-details.zh-TW.png",
+            "en": "https://zoosewu.github.io/apex-code/screenshots/zoo-downloader/02-details.en.png"
+          },
+          "caption": { "zh-TW": "下載詳情", "en": "Download details" },
+          "width": 1280,
+          "height": 800
+        },
+        {
+          "src": {
+            "zh-TW": "https://zoosewu.github.io/apex-code/screenshots/zoo-downloader/03-add.zh-TW.png",
+            "en": "https://zoosewu.github.io/apex-code/screenshots/zoo-downloader/03-add.en.png"
+          },
+          "caption": { "zh-TW": "新增下載", "en": "Add a download" },
+          "width": 1280,
+          "height": 800
+        }
+      ],
+      "related": [],
+      "updatedAt": "2026-11-18"
+    },
+    {
+      "id": "waypoint",
+      "name": "Waypoint",
+      "tagline": {
+        "zh-TW": "跨平台浮動筆記，依應用程式自動切換",
+        "en": "Cross-platform floating notes that follow the app you are using"
+      },
+      "description": {
+        "zh-TW": "一個快捷鍵叫出筆記列表，切換到不同的應用程式時自動換成對應的筆記集合。筆記永遠在最上層，支援 Markdown、滑鼠穿透與透明度調整，適合邊看筆記邊玩遊戲或操作其他軟體。",
+        "en": "One hotkey brings up your notes, and the set of notes switches automatically with the app in front. Notes stay on top with Markdown, click-through mode and adjustable opacity, so you can read them while playing a game or using other software."
+      },
+      "status": "active",
+      "upstream": null,
+      "platforms": ["windows", "macos", "linux"],
+      "stack": ["Rust", "Tauri", "Svelte"],
+      "version": null,
+      "license": null,
+      "links": {
+        "repo": "https://github.com/zoosewu/waypoint",
+        "releases": "https://github.com/zoosewu/waypoint/releases"
+      },
+      "install": [],
+      "screenshots": [],
+      "related": [],
+      "updatedAt": "2026-11-18"
+    },
+    {
+      "id": "z-overlay",
+      "name": "z-overlay",
+      "tagline": {
+        "zh-TW": "在指定程式上方疊加文字與圖片，用快捷鍵分組切換",
+        "en": "Text and image overlays on top of a chosen app, toggled in groups by hotkey"
+      },
+      "description": {
+        "zh-TW": "免安裝的 Windows 10 / 11 小工具。程式在前景時顯示可穿透滑鼠的文字與圖片，可分組並各自綁定快捷鍵。不需要系統管理員權限，也不注入或掛勾其他程式。",
+        "en": "A portable Windows 10 / 11 utility. While an app is in the foreground it shows click-through text and images, grouped and toggled by hotkey. Needs no administrator rights and never injects into or hooks other apps."
+      },
+      "status": "active",
+      "upstream": null,
+      "platforms": ["windows"],
+      "stack": ["Rust", "Slint"],
+      "version": "v0.1.2",
+      "license": "MIT",
+      "links": {
+        "repo": "https://github.com/zoosewu/z-overlay",
+        "releases": "https://github.com/zoosewu/z-overlay/releases"
+      },
+      "install": [
+        {
+          "type": "download",
+          "url": "https://github.com/zoosewu/z-overlay/releases/latest",
+          "label": { "zh-TW": "下載 z-overlay.exe", "en": "Download z-overlay.exe" }
+        }
+      ],
+      "screenshots": [],
+      "related": [],
+      "updatedAt": "2026-11-05"
+    },
+    {
+      "id": "kara-creator",
+      "name": "kara-creator",
+      "tagline": {
+        "zh-TW": "把 YouTube 影片做成逐字變色的 KTV 伴唱帶",
+        "en": "Turn YouTube videos into karaoke tracks with word-by-word highlighted lyrics"
+      },
+      "description": {
+        "zh-TW": "下載、去人聲、逐字對時、燒上逐字變色的字幕。在網頁上管理曲庫、編輯歌詞與調整時間，一鍵匯出給卡拉 OK 軟體使用。由 NAS 伺服器與有 NVIDIA 顯示卡的 AI 伺服器分工。",
+        "en": "Download, remove vocals, align lyrics word by word and burn in highlighted subtitles. Manage the library, edit lyrics and fine-tune timing in a web UI, then export for karaoke software. Split between a NAS server and AI servers with NVIDIA GPUs."
+      },
+      "status": "active",
+      "upstream": null,
+      "platforms": ["docker"],
+      "stack": ["Go", "Python", "PyTorch", "FFmpeg"],
+      "version": null,
+      "license": "AGPL-3.0",
+      "links": {
+        "repo": "https://github.com/zoosewu/kara-creator"
+      },
+      "install": [
+        {
+          "type": "docker",
+          "url": "https://github.com/zoosewu/kara-creator#readme",
+          "label": { "zh-TW": "用 Docker Compose 自架", "en": "Self-host with Docker Compose" }
+        }
+      ],
+      "screenshots": [],
+      "related": ["zkaraver"],
+      "updatedAt": "2026-11-03"
+    },
+    {
+      "id": "zkaraver",
+      "name": "zKaraver",
+      "tagline": {
+        "zh-TW": "自架的多房間卡拉 OK 點歌系統",
+        "en": "A self-hosted multi-room karaoke request system"
+      },
+      "description": {
+        "zh-TW": "手機掃 QR code 匿名點歌，電視或電腦開播放頁就自動播放。支援多房間、輪流制佇列、原唱與伴唱切換、升降 key，以及管理頁的踢人、點歌上限與演唱紀錄。",
+        "en": "Scan a QR code on your phone to queue songs anonymously, and open the player page on a TV or computer to start playing. Multiple rooms, round-robin queues, vocal/instrumental switching, key change, and an admin page with kicking, request limits and history."
+      },
+      "status": "active",
+      "upstream": null,
+      "platforms": ["docker"],
+      "stack": ["Go", "Svelte", "FFmpeg"],
+      "version": null,
+      "license": null,
+      "links": {
+        "repo": "https://github.com/zoosewu/zkaraver"
+      },
+      "install": [
+        {
+          "type": "docker",
+          "url": "https://github.com/zoosewu/zkaraver#readme",
+          "label": { "zh-TW": "用 Docker 自架", "en": "Self-host with Docker" }
+        }
+      ],
+      "screenshots": [],
+      "related": ["kara-creator"],
+      "updatedAt": "2026-11-13"
+    },
+    {
+      "id": "vscode-project-manager",
+      "name": "Project Manager (zoo)",
+      "tagline": {
+        "zh-TW": "VS Code 專案管理擴充，支援群組階層與拖曳排序",
+        "en": "A VS Code project manager extension with nested groups and drag-and-drop ordering"
+      },
+      "description": {
+        "zh-TW": "以 alefragnani/vscode-project-manager 為基礎的分支，發布為 zoosewu.project-manager-zoo。加入群組階層、拖曳排序、側邊欄群組檢視與每週自動更新，透過 GitHub Releases 發布 VSIX。",
+        "en": "A fork of alefragnani/vscode-project-manager published as zoosewu.project-manager-zoo. Adds nested groups, drag-and-drop ordering, a grouped Side Bar view and weekly auto-update, distributed as a VSIX on GitHub Releases."
+      },
+      "status": "active",
+      "upstream": "https://github.com/alefragnani/vscode-project-manager",
+      "platforms": ["vscode"],
+      "stack": ["TypeScript"],
+      "version": "v13.5.0",
+      "license": "GPL-3.0",
+      "links": {
+        "repo": "https://github.com/zoosewu/vscode-project-manager",
+        "releases": "https://github.com/zoosewu/vscode-project-manager/releases"
+      },
+      "install": [
+        {
+          "type": "download",
+          "url": "https://github.com/zoosewu/vscode-project-manager/releases/latest",
+          "label": { "zh-TW": "下載 VSIX", "en": "Download VSIX" }
+        }
+      ],
+      "screenshots": [],
+      "related": [],
+      "updatedAt": "2026-11-05"
+    },
+    {
+      "id": "ani-gamer-history",
+      "name": "ani-gamer-history",
+      "tagline": {
+        "zh-TW": "永久保存巴哈姆特動畫瘋的觀看紀錄",
+        "en": "Keep your Bahamut Anime Crazy watch history forever"
+      },
+      "description": {
+        "zh-TW": "動畫瘋的觀看紀錄 90 天後就會消失。這個 Tampermonkey 腳本把紀錄存在本機，在分集清單標出上次看到哪裡，首頁顯示歷史與最愛，也能透過 GitHub 私人 repo 在多台電腦間同步。",
+        "en": "Anime Crazy drops watch history after 90 days. This Tampermonkey script keeps it locally, marks where you left off in the episode list, shows history and favourites on the home page, and syncs between computers through a private GitHub repository."
+      },
+      "status": "active",
+      "upstream": null,
+      "platforms": ["browser"],
+      "stack": ["TypeScript", "React", "Tampermonkey"],
+      "version": "0.10.0",
+      "license": null,
+      "links": {
+        "repo": "https://github.com/zoosewu/ani-gamer-history",
+        "releases": "https://github.com/zoosewu/ani-gamer-history/releases"
+      },
+      "install": [
+        {
+          "type": "userscript",
+          "url": "https://github.com/zoosewu/ani-gamer-history/releases/latest/download/ani-gamer-history.user.js",
+          "label": { "zh-TW": "安裝腳本（需要 Tampermonkey）", "en": "Install script (requires Tampermonkey)" }
+        }
+      ],
+      "screenshots": [],
+      "related": [],
+      "updatedAt": "2026-09-18"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zoosewu.github.io/apex-code/api/v1/schema.json",
+  "title": "apex-code projects API v1",
+  "description": "Within v1, fields are only ever added. Consumers must ignore unknown fields and unknown enum values.",
+  "type": "object",
+  "required": ["apiVersion", "updatedAt", "locales", "projects"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "apiVersion": { "type": "string", "pattern": "^1\\.\\d+\\.\\d+$" },
+    "updatedAt": { "$ref": "#/$defs/date" },
+    "locales": { "type": "array", "items": { "type": "string" } },
+    "projects": {
+      "description": "Display order is the array order.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/project" }
+    }
+  },
+  "$defs": {
+    "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "url": { "type": "string", "pattern": "^https://" },
+    "localized": {
+      "type": "object",
+      "required": ["zh-TW", "en"],
+      "properties": {
+        "zh-TW": { "type": "string" },
+        "en": { "type": "string" }
+      }
+    },
+    "localizedUrl": {
+      "type": "object",
+      "required": ["zh-TW", "en"],
+      "properties": {
+        "zh-TW": { "$ref": "#/$defs/url" },
+        "en": { "$ref": "#/$defs/url" }
+      }
+    },
+    "project": {
+      "type": "object",
+      "required": ["id", "name", "tagline", "description", "status", "upstream", "platforms", "stack", "version", "license", "links", "install", "screenshots", "related", "updatedAt"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+        "name": { "type": "string" },
+        "tagline": { "$ref": "#/$defs/localized" },
+        "description": { "$ref": "#/$defs/localized" },
+        "status": { "enum": ["active", "maintained", "paused", "archived"] },
+        "upstream": {
+          "description": "Repository this project was forked from; null for original work.",
+          "oneOf": [{ "$ref": "#/$defs/url" }, { "type": "null" }]
+        },
+        "platforms": {
+          "type": "array",
+          "items": { "enum": ["windows", "macos", "linux", "browser", "vscode", "docker"] }
+        },
+        "stack": { "type": "array", "items": { "type": "string" } },
+        "version": {
+          "description": "Latest release tag at the time of the last sync; null when there is no release.",
+          "type": ["string", "null"]
+        },
+        "license": { "description": "SPDX expression", "type": ["string", "null"] },
+        "links": {
+          "type": "object",
+          "required": ["repo"],
+          "properties": {
+            "repo": { "$ref": "#/$defs/url" },
+            "releases": { "$ref": "#/$defs/url" },
+            "homepage": { "$ref": "#/$defs/url" }
+          }
+        },
+        "install": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["type", "url", "label"],
+            "properties": {
+              "type": { "enum": ["download", "userscript", "docker", "store"] },
+              "url": { "$ref": "#/$defs/url" },
+              "label": { "$ref": "#/$defs/localized" }
+            }
+          }
+        },
+        "screenshots": {
+          "description": "The first screenshot is the cover.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["src", "caption", "width", "height"],
+            "properties": {
+              "src": { "$ref": "#/$defs/localizedUrl" },
+              "caption": { "$ref": "#/$defs/localized" },
+              "width": { "type": "integer" },
+              "height": { "type": "integer" }
+            }
+          }
+        },
+        "related": { "description": "ids of related projects", "type": "array", "items": { "type": "string" } },
+        "updatedAt": { "$ref": "#/$defs/date" }
+      }
+    }
+  }
+}
