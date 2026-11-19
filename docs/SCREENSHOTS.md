@@ -49,9 +49,17 @@
 }
 ```
 
-鍵是去掉編號以外的副檔名與語言後的檔名（`01-main-window.png` → `01-main-window`）。
+鍵是檔名去掉語言與副檔名：`01-main-window.png` → `01-main-window`；`02-settings.zh-TW.png`、`02-settings.en.png` → `02-settings`。
+每張截圖都要有對應的鍵，`zh-TW` 和 `en` 都要填。
+
+## 完成檢查
+
+- [ ] `docs/screenshots/` 有 1–5 張截圖，編號從 `01` 連續
+- [ ] 每張都是 16:10，寬度至少 1280
+- [ ] `captions.json` 的鍵和截圖一一對應，中英文都有
+- [ ] 畫面沒有個人資料，也沒有桌面或其他程式
 
 ## 同步
 
-截圖放好並推上 GitHub（或存在本機）後，在 apex-code 對 Claude 說「更新 <專案 id>」，
-它會把截圖複製到 `apex-code/screenshots/<id>/` 並寫進 `api/v1/projects.json`。
+截圖由 apex-code 那邊同步：使用者在 apex-code 說「更新 <專案 id>」後，
+截圖會被複製到 `apex-code/screenshots/<id>/` 並寫進 API。本專案不需要做其他事。

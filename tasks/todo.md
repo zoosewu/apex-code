@@ -20,7 +20,8 @@
 - [x] 本機預覽驗證（桌面、英文、360px 無溢出）
 - [x] git init + commit
 - [ ] 建立 GitHub repo `zoosewu/apex-code`、push、開啟 Pages（使用者）
-- [ ] 各專案依 SCREENSHOTS.md 補截圖後同步
+- [x] docs/INTEGRATION.md：給各專案的單一入口（截圖 + CLAUDE.md 段落 + 回報）
+- [ ] 各專案依 INTEGRATION.md 補截圖後同步
 - [ ] 使用者指定正式排序
 - [ ] 決定給其他專案的渲染方式（元件／純文字）
 

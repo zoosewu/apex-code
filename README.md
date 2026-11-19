@@ -4,7 +4,7 @@ zoosewu 的專案介紹頁與專案資料 API。
 
 - 介紹頁：<https://zoosewu.github.io/apex-code/>
 - API：<https://zoosewu.github.io/apex-code/api/v1/projects.json>（說明見 [docs/API.md](docs/API.md)）
-- 截圖指引（給各專案）：[docs/SCREENSHOTS.md](docs/SCREENSHOTS.md)
+- 接入指引（給各專案）：[docs/INTEGRATION.md](docs/INTEGRATION.md)，截圖規格見 [docs/SCREENSHOTS.md](docs/SCREENSHOTS.md)
 
 ## 本機預覽
 
